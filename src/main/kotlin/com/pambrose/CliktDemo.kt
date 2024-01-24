@@ -13,7 +13,6 @@ import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter
 
-
 class CliktDemo : CliktCommand() {
   init {
     versionOption(
@@ -27,7 +26,8 @@ class CliktDemo : CliktCommand() {
         val formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
         val formattedDateTime = localDateTime.format(formatter)
         "Version: $VERSION Build Time: $formattedDateTime"
-      })
+      },
+    )
   }
 
   val count: Int by option("-c", "--count").int().default(1).help("Number of greetings")

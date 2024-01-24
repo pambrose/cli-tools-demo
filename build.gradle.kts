@@ -47,6 +47,11 @@ tasks.test {
 
 kotlin {
     jvmToolchain(17)
+
+    kotlinter {
+        ignoreFailures = false
+        reporters = arrayOf("checkstyle", "plain")
+    }
 }
 
 tasks {

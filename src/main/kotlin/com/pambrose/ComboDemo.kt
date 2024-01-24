@@ -23,7 +23,6 @@ class ComboDemo : CliktCommand() {
   val answer: String by option("-a", "--answer").default("Success!").help("The result value")
 
   override fun run() {
-
     session {
       var result by liveVarOf<String?>(null)
       val spinnerAnim = textAnimOf(listOf("\\", "|", "/", "-"), 125.milliseconds)
@@ -58,4 +57,3 @@ class ComboDemo : CliktCommand() {
 }
 
 fun main(args: Array<String>) = ComboDemo().main(args)
-
