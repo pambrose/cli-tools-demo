@@ -1,6 +1,5 @@
 .gradle/
 build/
-.idea/
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
